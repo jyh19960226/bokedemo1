@@ -40,5 +40,4 @@ def update_data(table,update_line,update_data,condition_line,condition):
 # update_data(update_table,update_line,update_data,update_condition_line,update_condition)
 # 查询数据
 def select_data():
-    select_list=[]
   sql="selent"
