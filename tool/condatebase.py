@@ -22,7 +22,6 @@ conn = pymysql.Connect(
     passwd='root',
     db='myboke',
     charset='utf8'
-
 )
 # 获取游标
 cur = conn.cursor()
