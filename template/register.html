@@ -15,10 +15,16 @@
     <![endif]-->
     <style>
         #register_form {
-            width:600px;
-            background-color: #1b6d85;
+            width: 500px;
             margin: 30%;
             margin-top: 50px;
+
+        }
+
+        body {
+            background-image: url("images/register.jpg");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
         }
 
         div {
@@ -26,31 +32,45 @@
 
         }
     </style>
+
 </head>
 <body>
-
+<ul class="nav nav-pills">
+    <li class="active"><a href="index.html">Home</a></li>
+    <li><a href="#">新闻</a></li>
+    <li><a href="#">python</a></li>
+    <li><a href="#">java</a></li>
+    <li><a href="#">java</a></li>
+    <li><a href="#">简历模板</a></li>
+    <li><a href="#">关于博主</a></li>
+    <li class="pull-right"><a href="register.html">注册</a></li>
+    <li class="pull-right"><a href="#">登录</a></li>
+</ul>
 <div id="register_form">
     <div style="margin: auto;margin-bottom: 50px; text-align:center;width: 50%;"><h1>用户注册</h1></div>
     <form class="form-horizontal" role="form">
-        <div id="register_form_name" style="background-color: #985f0d;" >
-            <label  for="user_name" class="col-sm-2 control-label">用户名：</label>
-            <input style="width: 50%" type="text" class="form-control" id="user_name" placeholder="请输入名字">
+        <div id="register_form_name">
+            <div style="width: 50%">
+                <label for="user_name" class="col-sm-6 control-label">用户名：</label>
+            </div>
+            <input style="width: 50%;margin:0 20px 0 100px" type="text" class="form-control" id="user_name"
+                   placeholder="请输入名字">
         </div>
-        <div id="register_form_pw" >
-            <label  for="password" class="col-sm-2 control-label">密码：</label>
+        <div id="register_form_pw">
+            <label for="password" class="col-sm-3 control-label">密码：</label>
             <input style="width: 50%" type="password" class="form-control" id="password" placeholder="请输入密码">
         </div>
         <div id="register_form_repw">
-            <label for="repassword" class="col-sm-2 control-label">确认密码：</label>
+            <label for="repassword" class="col-sm-3 control-label">确认密码：</label>
             <input style="width: 50%" type="password" class="form-control" id="repassword" placeholder="请再次输入密码">
         </div>
         <div id="register_form_email">
-            <label for="email" class="col-sm-2 control-label">邮箱：</label>
+            <label for="email" class="col-sm-3 control-label">邮箱：</label>
             <input style="width: 50%" type="text" class="form-control" id="email" placeholder="请输入邮箱">
         </div>
         <div class="form-group" style="margin: auto">
-            <div class="col-sm-offset-2 col-sm-10">
-                <button type="submit" class="btn btn-primary">提交表单</button>
+            <div class="submit">
+                <button type="submit" style="margin:0 40%" class="btn btn-primary">点击注册</button>
             </div>
         </div>
     </form>
