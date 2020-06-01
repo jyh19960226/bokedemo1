@@ -1,0 +1,35 @@
+from app import app
+>>> from flask import request
+>>> app.test_request_context('/basic').push()#激活请求上下文
+>>> from flask import current_app
+>>> app.app_context().push()#激活程序上下文
+>>> current_app.name
+'app'
+>>>#定义LoginForm类
+>>> from wtforms import Form, StringField,PasswordField,BooleanField
+>>> from wtforms.validators import DataRequired,length
+>>> class LoginForm(Form):
+...     username = StringField('Username', validators=[DataRequired()])
+...     password = PasswordField('Password',validators=[DataRequired(),length(8,128)])
+...
+>>> form = LoginForm(username='',password='123')
+>>> form.data  #表单数据字典
+{'username': '', 'password': '123'}
+>>> form.validate()
+False
+>>> form.errors
+{'username': [u'This field is required.'], 'password': [u'Field must be between 8 and 128 characters long.']}
+>>> form2 = LoginForm(username='xiaxiaoxu', password='123456')
+>>> form2.data  #表单数据字典
+{'username': 'xiaxiaoxu', 'password': '123456'}
+>>> form2.validate()
+False
+>>> form2.errors  #错误消息字典
+{'password': [u'Field must be between 8 and 128 characters long.']}
+>>> form3 = LoginForm(username='xiaxiaoxu', password='123456789')
+>>> form3.data
+{'username': 'xiaxiaoxu', 'password': '123456789'}
+>>> form3.validate()
+True
+>>> form3.errors
+{}
